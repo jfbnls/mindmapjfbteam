@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>JFBTeam — Écosystème complet</title>
+<style>
+  :root {
+    --nuit: #1a1a2e;
+    --nuit-soft: #232342;
+    --volt: #e8ff47;
+    --volt-deep: #b8a700;
+    --upone: #7c5cf0;
+    --upone-soft: #6d5b9e;
+    --wefi: #14a89a;
+    --corsair: #e0653a;
+    --ink: #eceaf5;
+    --page-bg: #f2f0f7;
+    --muted: #6b6880;
+  }
+  body {
+    margin: 0;
+    background: var(--page-bg);
+    font-family: 'Hanken Grotesque', 'Archivo', system-ui, -apple-system, sans-serif;
+    color: var(--nuit);
+    padding: 28px 12px 50px;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; overflow-x: auto; }
+  h1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--nuit);
+    letter-spacing: 1px;
+    margin: 0 0 4px;
+  }
+  h1 span { color: var(--volt-deep); }
+  .subtitle {
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    letter-spacing: 0.4px;
+  }
+  .stage { position: relative; width: 980px; height: 680px; margin: 0 auto; }
+  svg.connectors { position: absolute; top: 0; left: 0; width: 980px; height: 680px; pointer-events: none; }
+  .card {
+    position: absolute;
+    border-radius: 16px;
+    padding: 16px 18px;
+    box-sizing: border-box;
+    background: var(--nuit);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 6px 18px rgba(26,26,46,0.18);
+    color: var(--ink);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(26,26,46,0.28); }
+  .card .name { font-size: 15.5px; font-weight: 600; margin: 0 0 2px; }
+  .card .tag { font-size: 11.5px; opacity: .8; margin: 0 0 10px; line-height: 1.4; }
+  .card .links a {
+    display: inline-block;
+    font-size: 11px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 999px;
+    margin: 2px 4px 0 0;
+    font-weight: 700;
+  }
+
+  /* Hero node — TalkFusion */
+  .hero {
+    width: 200px; left: 390px; top: 280px;
+    background: var(--volt); color: var(--nuit);
+    text-align: center; padding: 20px 18px;
+  }
+  .hero .name { font-size: 18px; }
+  .hero .tag { color: rgba(26,26,46,0.75); }
+  .hero .links a { background: var(--nuit); color: var(--volt); }
+
+  /* Quiz — entrée TalkFusion */
+  .quiz { width: 190px; left: 395px; top: 460px; border-color: var(--volt-deep); text-align: center; }
+  .quiz .name { color: var(--volt); }
+  .quiz .links a { background: var(--volt); color: var(--nuit); }
+
+  /* Upone hub */
+  .upone-hub { width: 220px; left: 380px; top: 30px; border-color: var(--upone); }
+  .upone-hub .name { color: var(--upone); }
+  .upone-hub .links a { background: var(--upone); color: #fff; }
+  .upone-hub .links a.secondary { background: transparent; border: 1px solid var(--upone); color: var(--upone); }
+
+  .universe { width: 150px; background: var(--upone-soft); }
+  .universe .name { font-size: 13px; }
+  .u1 { left: 50px;  top: 30px; }
+  .u2 { left: 220px; top: 30px; }
+  .u3 { left: 640px; top: 30px; }
+  .u4 { left: 810px; top: 30px; }
+
+  /* WeFi */
+  .wefi { width: 195px; left: 750px; top: 440px; border-color: var(--wefi); }
+  .wefi .name { color: var(--wefi); }
+  .wefi .links a { background: var(--wefi); color: var(--nuit); }
+
+  /* CorsairConnect */
+  .corsair { width: 195px; left: 35px; top: 440px; border-color: var(--corsair); }
+  .corsair .name { color: var(--corsair); }
+  .corsair .links a { background: var(--corsair); color: var(--nuit); }
+
+  .price { font-size: 10.5px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+  .card .price { color: #b3b0c5; }
+  .footer { text-align: center; font-size: 11px; color: var(--muted); margin-top: 18px; letter-spacing: .5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>L'ÉCOSYSTÈME <span>JFBTEAM</span></h1>
+  <div class="subtitle">une porte, plusieurs chemins — choisissez votre affinité</div>
+
+  <div class="stage">
+    <svg class="connectors" viewBox="0 0 980 680">
+      <defs>
+        <style> .link { fill:none; stroke-width:1.8; opacity:0.6; } </style>
+      </defs>
+      <path class="link" stroke="#7c5cf0" d="M 490,280 C 490,210 490,150 490,120"/>
+      <path class="link" stroke="#b8a700" d="M 490,395 C 490,420 490,440 490,460"/>
+      <path class="link" stroke="#14a89a" d="M 590,330 C 700,380 800,410 845,440"/>
+      <path class="link" stroke="#e0653a" d="M 390,330 C 280,380 180,410 135,440"/>
+    </svg>
+
+    <!-- TalkFusion : hero central -->
+    <div class="card hero">
+      <div class="name">TalkFusion</div>
+      <div class="tag">L'outil central de communication digitale — vidéo-mail, depuis 2017</div>
+      <div class="links">
+        <a href="https://talkfusion.com/join/91058291" target="_blank" rel="noopener">S'inscrire</a>
+      </div>
+      <div class="price">Starter 175 $ · Elite 350 $ · Pro 700 $ — abonnement 20 $/40 $/50 $</div>
+    </div>
+
+    <!-- Quiz d'entrée -->
+    <div class="card quiz">
+      <div class="name">Quiz Communication</div>
+      <div class="tag">2 minutes pour découvrir votre profil</div>
+      <div class="links">
+        <a href="https://tinyurl.com/TF-JFBteam" target="_blank" rel="noopener">Faire le quiz</a>
+      </div>
+    </div>
+
+    <!-- Upone hub -->
+    <div class="card upone-hub">
+      <div class="name">Upone</div>
+      <div class="tag">4 univers — Social Connector</div>
+      <div class="links">
+        <a href="https://rebrand.ly/jfbteam" target="_blank" rel="noopener">Quiz</a>
+        <a class="secondary" href="https://upone.ai/jfbteam" target="_blank" rel="noopener">S'inscrire</a>
+      </div>
+    </div>
+    <div class="card universe u1"><div class="name">UP Luxe</div></div>
+    <div class="card universe u2"><div class="name">UP Voyages</div></div>
+    <div class="card universe u3"><div class="name">UP Elearning & Growth</div></div>
+    <div class="card universe u4"><div class="name">UP Stockage sécurisé</div></div>
+
+    <!-- WeFi -->
+    <div class="card wefi">
+      <div class="name">WeFi.co</div>
+      <div class="tag">Banque on-chain décentralisée · DeFi · </div>
+      <div class="links">
+        <a href="https://app.wefi.co/register?ref=o1ca2tppvy" target="_blank" rel="noopener">S'inscrire</a>
+      </div>
+    </div>
+
+    <!-- CorsairConnect -->
+    <div class="card corsair">
+      <div class="name">CorsairConnect</div>
+      <div class="tag">Recyclage plastique — crédits plastiques depuis 2019</div>
+      <div class="links">
+        <a href="https://www.corsairconnect.com/sponsor/jfbteam" target="_blank" rel="noopener">Devenir sponsor</a>
+      </div>
+      <div class="price">Inscription 10 €/an · achat de déchets dès 100 €</div>
+    </div>
+  </div>
+
+  <div class="footer">JFBTeam · Papyboomer actif · vous pouvez en choisir une, plusieurs, ou juste regarder passer</div>
+</div>
+</body>
+</html>
